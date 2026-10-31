@@ -1,203 +1,416 @@
 
 :root {
-  --crema: #f8f5ef;
-  --verde: #596b56;
-  --dorado: #b49a70;
-  --texto: #444;
+  --amarillo: #e8c95e;
+  --champan: #f5e6ad;
+  --dorado: #b28a35;
+  --crema: #fffaf0;
+  --blanco: #ffffff;
+  --oscuro: #39352d;
+  --texto: #514b40;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
+  scroll-padding-top: 80px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--texto);
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
 }
 
-/* NAVBAR */
+[hidden] {
+  display: none !important;
+}
+
+/* =====================================
+   1. NAVEGACIÓN
+===================================== */
+
 .navbar {
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  background: rgba(255, 250, 240, 0.97);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
 }
 
 .navbar-brand {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: var(--verde);
-}
-
-.nav-link {
-  font-size: 0.85rem;
-  margin-left: 15px;
-}
-
-.nav-link:hover {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
   color: var(--dorado);
 }
 
-/* PORTADA */
+.navbar-brand:hover {
+  color: var(--oscuro);
+}
+
+.nav-link {
+  color: var(--oscuro);
+  font-size: 0.85rem;
+  margin-left: 12px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--dorado);
+}
+
+/* =====================================
+   2. PORTADA
+===================================== */
+
 .hero {
   min-height: 100vh;
+
   background:
-    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.40)),
-    url('../img/portada.jpg') center/cover no-repeat;
+    linear-gradient(
+      rgba(25, 22, 15, 0.35),
+      rgba(25, 22, 15, 0.55)
+    ),
+    url("../img/portada.jpeg") center/cover no-repeat;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 110px 20px 70px;
   color: white;
-  padding: 100px 20px;
+}
+
+.hero-contenido {
+  max-width: 850px;
 }
 
 .hero h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(5rem, 11vw, 9rem);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(5rem, 12vw, 10rem);
+  color: #ffe69a;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
 }
 
 .subtitulo {
   letter-spacing: 6px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .fecha {
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.hero-frase {
+  font-style: italic;
+  line-height: 1.8;
 }
 
 .separador {
   font-size: 3rem;
-  color: #eadbc5;
+  color: var(--champan);
 }
 
-/* SECCIONES */
+/* =====================================
+   3. ESTILOS GENERALES
+===================================== */
+
 .seccion {
   padding: 100px 20px;
 }
 
 .fondo-crema {
-  background-color: var(--crema);
+  background: var(--crema);
 }
 
 .etiqueta {
   color: var(--dorado);
+  font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
 }
 
 h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  color: var(--verde);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  color: var(--dorado);
   margin-bottom: 25px;
 }
 
 h3 {
-  color: var(--verde);
+  color: var(--oscuro);
 }
 
 .btn-boda {
-  background: var(--verde);
-  color: white;
-  border-radius: 0;
-  padding: 12px 30px;
-  letter-spacing: 1px;
+  background: var(--amarillo);
+  color: var(--oscuro);
+  border: 1px solid var(--dorado);
+  border-radius: 30px;
+  padding: 13px 32px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-.btn-boda:hover {
+.btn-boda:hover,
+.btn-boda:focus {
   background: var(--dorado);
+  border-color: var(--dorado);
   color: white;
   transform: translateY(-3px);
 }
 
-/* CUENTA ATRÁS */
+/* =====================================
+   4. MÚSICA
+===================================== */
+
+.btn-musica {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1100;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  border: 2px solid var(--dorado);
+
+  background: var(--champan);
+  color: var(--oscuro);
+
+  font-size: 1.7rem;
+  cursor: pointer;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: 0.3s;
+}
+
+.btn-musica:hover {
+  transform: scale(1.08);
+}
+
+.btn-musica.activa {
+  background: var(--dorado);
+  color: white;
+}
+
+.btn-musica:focus-visible {
+  outline: 3px solid var(--oscuro);
+  outline-offset: 3px;
+}
+
+/* =====================================
+   5. CUENTA ATRÁS
+===================================== */
+
 .numero {
+  color: var(--dorado);
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--verde);
   font-weight: 300;
 }
 
-/* HISTORIA */
+/* =====================================
+   6. NUESTRA HISTORIA
+===================================== */
+
+.foto-historia {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  border-radius: 180px 180px 10px 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
 .texto-historia {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 2;
 }
 
-.firma {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  margin-top: 30px;
+.frase-destacada {
+  color: var(--dorado);
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 25px;
 }
 
-/* CEREMONIA */
+.firma {
+  font-family: "Great Vibes", cursive;
+  color: var(--dorado);
+  font-size: 3.5rem;
+  margin-top: 25px;
+}
+
+/* =====================================
+   7. CEREMONIA Y CELEBRACIÓN
+===================================== */
+
 .tarjeta-evento {
-  border: 1px solid #ded8cd;
-  padding: 45px 25px;
+  border: 1px solid #e5d5a6;
+  background: white;
+  padding: 50px 25px;
   height: 100%;
   transition: 0.3s;
 }
 
 .tarjeta-evento:hover {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .tarjeta-evento h3 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: var(--dorado);
 }
 
 .icono-evento {
-  font-size: 3rem;
   color: var(--dorado);
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-/* GALERÍA */
-.foto-placeholder {
-  min-height: 300px;
-  background: #e4ddd0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #756c60;
-  font-style: italic;
+/* =====================================
+   8. FOTO ÚNICA: POSANDO
+===================================== */
+
+.foto-posando {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  margin: 0 auto;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* FORMULARIO */
+/* =====================================
+   9. FORMULARIO
+===================================== */
+
 .formulario-boda {
-  padding: 40px;
-  background: var(--crema);
+  background: white;
+  padding: 45px;
+  border: 1px solid #ecdfb7;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.04);
+}
+
+.titulo-form {
+  color: var(--dorado);
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .form-control,
 .form-select {
-  border-radius: 0;
+  border-radius: 5px;
+  border: 1px solid #d9cfb4;
   padding: 12px;
-  border: 1px solid #d7d0c4;
 }
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--verde);
-  box-shadow: 0 0 0 0.2rem rgba(89,107,86,0.15);
+  border-color: var(--dorado);
+  box-shadow: 0 0 0 0.2rem rgba(232, 201, 94, 0.2);
 }
 
-/* FOOTER */
+.form-check-input:checked {
+  background-color: var(--dorado);
+  border-color: var(--dorado);
+}
+
+/* ACOMPAÑANTES */
+
+.tarjeta-acompanante {
+  background: var(--crema);
+  border: 1px solid #eadcba;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.tarjeta-acompanante h4 {
+  color: var(--dorado);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* TRANSPORTE */
+
+.opciones-transporte {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.opcion-transporte {
+  position: relative;
+  cursor: pointer;
+}
+
+.opcion-transporte input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.opcion-transporte span {
+  display: flex;
+  min-height: 100px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 15px;
+
+  border: 2px solid #e8dcb9;
+  border-radius: 10px;
+
+  background: white;
+  transition: 0.25s;
+}
+
+.opcion-transporte:hover span {
+  transform: translateY(-3px);
+  border-color: var(--dorado);
+}
+
+.opcion-transporte input:checked + span {
+  background: var(--champan);
+  border-color: var(--dorado);
+  font-weight: 600;
+}
+
+.opcion-transporte input:focus-visible + span {
+  outline: 3px solid var(--dorado);
+  outline-offset: 3px;
+}
+
+.texto-legal {
+  font-size: 0.75rem;
+  color: #6b6458;
+}
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
 footer {
-  background: var(--verde);
+  background: var(--oscuro);
   color: white;
-  padding: 60px 20px;
+  padding: 65px 20px;
 }
 
 footer h2 {
-  color: white;
+  color: var(--champan);
 }
 
+/* =====================================
+   11. RESPONSIVE
+===================================== */
+
 @media (max-width: 767.98px) {
+
   .seccion {
     padding: 65px 15px;
   }
@@ -206,12 +419,49 @@ footer h2 {
     min-height: 90vh;
   }
 
+  .hero h1 {
+    font-size: clamp(4rem, 17vw, 6rem);
+  }
+
+  .subtitulo {
+    letter-spacing: 3px;
+  }
+
+  .fecha {
+    letter-spacing: 2px;
+  }
+
   .formulario-boda {
     padding: 25px 18px;
+  }
+
+  .opciones-transporte {
+    grid-template-columns: 1fr;
+  }
+
+  .opcion-transporte span {
+    min-height: 65px;
+  }
+
+  .foto-posando {
+    max-width: 100%;
   }
 
   .nav-link {
     margin-left: 0;
     padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 }

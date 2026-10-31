@@ -1,52 +1,85 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7edc8">
 
-  <title>La boda de Javi & Tess</title>
+  <title>La boda de Javi & Tess | 11 septiembre 2027</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- BOOTSTRAP 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- TIPOGRAFÍAS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-  <!-- CSS propio -->
-  <link rel="stylesheet" href="css/estilos.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/javi&tess.css">
 </head>
 
 <body>
 
+  <!-- MÚSICA -->
+  <audio id="musicaBoda" loop preload="none">
+    <source src="music/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="btnMusica"
+          class="btn-musica"
+          type="button"
+          aria-label="Reproducir música"
+          aria-pressed="false"
+          title="Activar música">
+    ♫
+  </button>
+
   <!-- NAVEGACIÓN -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
+
       <a class="navbar-brand" href="#inicio">J & T</a>
 
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#menu">
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menu"
+              aria-controls="menu"
+              aria-expanded="false"
+              aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto text-center">
+
           <li class="nav-item">
             <a class="nav-link" href="#inicio">Inicio</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#historia">Nuestra historia</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="#evento">La boda</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#galeria">Galería</a>
+            <a class="nav-link" href="#foto">Nosotros</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="#confirmacion">Confirmar asistencia</a>
+            <a class="nav-link" href="#confirmacion">
+              Confirmar asistencia
+            </a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -54,70 +87,114 @@
 
   <!-- PORTADA -->
   <header id="inicio" class="hero">
+
     <div class="hero-contenido text-center">
+
       <p class="subtitulo">¡NOS CASAMOS!</p>
 
       <h1>Javi & Tess</h1>
 
       <div class="separador">♡</div>
 
-      <p class="fecha">PRÓXIMAMENTE · 2027</p>
+      <p class="fecha">11 DE SEPTIEMBRE DE 2027</p>
+
+      <p class="hero-frase">
+        Diez años de amor, música y momentos inolvidables
+      </p>
 
       <a href="#historia" class="btn btn-boda mt-4">
-        Descubre nuestra historia
+        Nuestra historia
       </a>
+
     </div>
   </header>
 
   <!-- CUENTA ATRÁS -->
   <section class="seccion text-center">
+
     <div class="container">
+
       <p class="etiqueta">COMIENZA LA CUENTA ATRÁS</p>
+
       <h2>Para nuestro gran día</h2>
-      <p>Muy pronto celebraremos juntos un día inolvidable.</p>
+
+      <p>
+        El 11 de septiembre de 2027 celebraremos
+        juntos un día inolvidable.
+      </p>
 
       <div class="row justify-content-center g-3 mt-4">
+
         <div class="col-3 col-md-2">
           <div class="numero" id="dias">--</div>
           <span>Días</span>
         </div>
+
         <div class="col-3 col-md-2">
           <div class="numero" id="horas">--</div>
           <span>Horas</span>
         </div>
+
         <div class="col-3 col-md-2">
           <div class="numero" id="minutos">--</div>
           <span>Minutos</span>
         </div>
+
         <div class="col-3 col-md-2">
           <div class="numero" id="segundos">--</div>
           <span>Segundos</span>
         </div>
+
       </div>
+
+      <p id="mensajeContador" class="mt-4"></p>
+
     </div>
   </section>
 
   <!-- NUESTRA HISTORIA -->
   <section id="historia" class="seccion fondo-crema">
-    <div class="container text-center">
-      <p class="etiqueta">NUESTRA HISTORIA</p>
-      <h2>El comienzo de nuestro para siempre</h2>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
+    <div class="container">
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+
+          <img src="img/bailando.jpeg"
+               class="img-fluid foto-historia"
+               alt="Javi y Tess bailando"
+               loading="lazy">
+
+        </div>
+
+        <div class="col-lg-6 text-center">
+
+          <p class="etiqueta">NUESTRA HISTORIA</p>
+
+          <h2>Todo comenzó con un baile...</h2>
+
           <p class="texto-historia">
-            Hay historias que comienzan por casualidad
-            y terminan convirtiéndose en lo más bonito
-            de nuestras vidas.
+            Hace diez años, la música cruzó nuestros caminos.
+            Lo que comenzó con un baile se convirtió
+            en una historia llena de amor, complicidad
+            y sueños compartidos.
           </p>
 
           <p>
-            Después de tantos momentos compartidos,
-            aventuras y sueños, hemos decidido dar
-            el siguiente paso.
+            Desde entonces hemos compartido innumerables
+            canciones, pasos y momentos especiales.
+            Y ahora queremos comenzar juntos
+            un nuevo capítulo.
+          </p>
+
+          <p class="frase-destacada">
+            "Porque el mejor baile de nuestra vida
+            es el que seguimos bailando juntos."
           </p>
 
           <h3 class="firma">Javi & Tess</h3>
+
         </div>
       </div>
     </div>
@@ -125,37 +202,66 @@
 
   <!-- CEREMONIA Y CELEBRACIÓN -->
   <section id="evento" class="seccion">
+
     <div class="container text-center">
+
       <p class="etiqueta">EL GRAN DÍA</p>
+
       <h2>¿Dónde nos casamos?</h2>
+
+      <p>Sábado, 11 de septiembre de 2027</p>
 
       <div class="row justify-content-center g-4 mt-4">
 
+        <!-- CEREMONIA -->
         <div class="col-md-5">
+
           <div class="tarjeta-evento">
+
             <div class="icono-evento">♡</div>
+
             <h3>La ceremonia</h3>
-            <p>Fecha y hora por confirmar</p>
-            <p>Lugar de la ceremonia</p>
-            <p>Dirección pendiente</p>
 
-            <a href="#" class="btn btn-boda">
+            <p>
+              <strong>Finca Jardines de Utrera</strong>
+            </p>
+
+            <p>Morzábez, Salamanca</p>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Finca%20Jardines%20de%20Utrera%20Morzabez%20Salamanca"
+              class="btn btn-boda mt-3"
+              target="_blank"
+              rel="noopener noreferrer">
               Cómo llegar
             </a>
+
           </div>
         </div>
 
+        <!-- CELEBRACIÓN -->
         <div class="col-md-5">
-          <div class="tarjeta-evento">
-            <div class="icono-evento">✧</div>
-            <h3>La celebración</h3>
-            <p>Hora por confirmar</p>
-            <p>Lugar de la celebración</p>
-            <p>Dirección pendiente</p>
 
-            <a href="#" class="btn btn-boda">
+          <div class="tarjeta-evento">
+
+            <div class="icono-evento">✧</div>
+
+            <h3>La celebración</h3>
+
+            <p>
+              <strong>Finca Jardines de Utrera</strong>
+            </p>
+
+            <p>Morzábez, Salamanca</p>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Finca%20Jardines%20de%20Utrera%20Morzabez%20Salamanca"
+              class="btn btn-boda mt-3"
+              target="_blank"
+              rel="noopener noreferrer">
               Cómo llegar
             </a>
+
           </div>
         </div>
 
@@ -163,117 +269,345 @@
     </div>
   </section>
 
-  <!-- GALERÍA -->
-  <section id="galeria" class="seccion fondo-crema">
-    <div class="container text-center">
-      <p class="etiqueta">NUESTROS RECUERDOS</p>
-      <h2>Momentos especiales</h2>
+  <!-- FOTO DE JAVI Y TESS -->
+  <section id="foto" class="seccion fondo-crema">
 
-      <div class="row g-3 mt-4">
-        <div class="col-md-4">
-          <div class="foto-placeholder">Nuestra foto 1</div>
-        </div>
-        <div class="col-md-4">
-          <div class="foto-placeholder">Nuestra foto 2</div>
-        </div>
-        <div class="col-md-4">
-          <div class="foto-placeholder">Nuestra foto 3</div>
-        </div>
-      </div>
+    <div class="container text-center">
+
+      <img src="img/posando.jpeg"
+           class="img-fluid foto-posando"
+           alt="Javi y Tess posando"
+           loading="lazy">
+
     </div>
   </section>
 
-  <!-- CONFIRMACIÓN -->
-  <section id="confirmacion" class="seccion">
+  <!-- REGALOS -->
+  <section class="seccion text-center">
+
     <div class="container">
+
+      <p class="etiqueta">UN DETALLE ESPECIAL</p>
+
+      <h2>El mejor regalo es compartir este día</h2>
+
+      <p>
+        Vuestra presencia es nuestro mayor regalo.
+        Si además queréis tener un detalle con nosotros,
+        pronto os contaremos cómo hacerlo.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FORMULARIO RSVP -->
+  <section id="confirmacion" class="seccion fondo-crema">
+
+    <div class="container">
+
       <div class="text-center">
+
         <p class="etiqueta">RSVP</p>
+
         <h2>Confirma tu asistencia</h2>
-        <p>Nos encantaría contar contigo en nuestro gran día.</p>
+
+        <p>
+          Queremos organizarlo todo con mucho cariño.
+          Ayúdanos completando este formulario.
+        </p>
+
       </div>
 
       <div class="row justify-content-center mt-4">
-        <div class="col-lg-7">
+
+        <div class="col-lg-9">
+
           <form id="formInvitados" class="formulario-boda">
 
-            <div class="mb-3">
-              <label for="nombre" class="form-label">
-                Nombre y apellidos
-              </label>
-              <input type="text" class="form-control"
-                id="nombre" name="nombre" required>
+            <!-- DATOS PRINCIPALES -->
+            <h3 class="titulo-form">Tus datos</h3>
+
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">
+                  Nombre *
+                </label>
+
+                <input type="text"
+                       class="form-control"
+                       id="nombre"
+                       name="nombre"
+                       maxlength="60"
+                       required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="apellidos" class="form-label">
+                  Apellidos *
+                </label>
+
+                <input type="text"
+                       class="form-control"
+                       id="apellidos"
+                       name="apellidos"
+                       maxlength="100"
+                       required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">
+                  Correo electrónico *
+                </label>
+
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       name="email"
+                       required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="asistencia" class="form-label">
+                  ¿Nos acompañarás? *
+                </label>
+
+                <select class="form-select"
+                        id="asistencia"
+                        name="asistencia"
+                        required>
+
+                  <option value="">
+                    Selecciona una opción
+                  </option>
+
+                  <option value="si">
+                    ¡Sí, allí estaré!
+                  </option>
+
+                  <option value="no">
+                    No podré asistir
+                  </option>
+
+                </select>
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">
-                Correo electrónico
-              </label>
-              <input type="email" class="form-control"
-                id="email" name="email" required>
+            <!-- CAMPOS SI ASISTE -->
+            <div id="datosAsistentes" class="mt-4" hidden>
+
+              <!-- ALERGIAS DEL INVITADO PRINCIPAL -->
+              <h3 class="titulo-form">
+                Información alimentaria
+              </h3>
+
+              <p>
+                ¿Tienes alguna alergia o intolerancia alimentaria? *
+              </p>
+
+              <div class="d-flex flex-wrap gap-4">
+
+                <div class="form-check">
+                  <input class="form-check-input"
+                         type="radio"
+                         name="alergiaPrincipal"
+                         id="alergiaPrincipalSi"
+                         value="si">
+
+                  <label class="form-check-label"
+                         for="alergiaPrincipalSi">
+                    Sí
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input"
+                         type="radio"
+                         name="alergiaPrincipal"
+                         id="alergiaPrincipalNo"
+                         value="no">
+
+                  <label class="form-check-label"
+                         for="alergiaPrincipalNo">
+                    No
+                  </label>
+                </div>
+
+              </div>
+
+              <div id="detallePrincipalBox"
+                   class="mt-3"
+                   hidden>
+
+                <label for="detallePrincipal"
+                       class="form-label">
+                  Indica tus alergias o intolerancias *
+                </label>
+
+                <input type="text"
+                       class="form-control"
+                       id="detallePrincipal"
+                       name="detallePrincipal"
+                       maxlength="300">
+
+              </div>
+
+              <!-- ACOMPAÑANTES -->
+              <h3 class="titulo-form mt-5">
+                Tus acompañantes
+              </h3>
+
+              <div class="mb-3">
+
+                <label for="acompanantes"
+                       class="form-label">
+                  ¿Cuántos acompañantes vendrán contigo? *
+                </label>
+
+                <select class="form-select"
+                        id="acompanantes"
+                        name="acompanantes">
+
+                  <option value="0">Ninguno, voy solo/a</option>
+                  <option value="1">1 acompañante</option>
+                  <option value="2">2 acompañantes</option>
+                  <option value="3">3 acompañantes</option>
+                  <option value="4">4 acompañantes</option>
+                  <option value="5">5 acompañantes</option>
+                  <option value="6">6 acompañantes</option>
+                  <option value="7">7 acompañantes</option>
+                  <option value="8">8 acompañantes</option>
+                  <option value="9">9 acompañantes</option>
+                  <option value="10">10 acompañantes</option>
+
+                </select>
+
+              </div>
+
+              <!-- ACOMPAÑANTES GENERADOS CON JS -->
+              <div id="listaAcompanantes"></div>
+
+              <!-- TRANSPORTE -->
+              <h3 class="titulo-form mt-5">
+                Al terminar la celebración:
+              </h3>
+
+              <p>Selecciona una opción *</p>
+
+              <div class="opciones-transporte">
+
+                <label class="opcion-transporte">
+                  <input type="radio"
+                         name="transporte"
+                         value="alojamiento">
+
+                  <span>🏨 Me alojaré</span>
+                </label>
+
+                <label class="opcion-transporte">
+                  <input type="radio"
+                         name="transporte"
+                         value="autobus">
+
+                  <span>🚌 Volveré en autobús</span>
+                </label>
+
+                <label class="opcion-transporte">
+                  <input type="radio"
+                         name="transporte"
+                         value="coche">
+
+                  <span>🚗 Iré en coche propio</span>
+                </label>
+
+              </div>
+
             </div>
 
-            <div class="mb-3">
-              <label for="asistencia" class="form-label">
-                ¿Nos acompañarás?
-              </label>
-              <select class="form-select" id="asistencia"
-                name="asistencia" required>
-                <option value="">Selecciona una opción</option>
-                <option value="si">¡Sí, allí estaré!</option>
-                <option value="no">No podré asistir</option>
-              </select>
-            </div>
+            <!-- MENSAJE -->
+            <div class="mt-4">
 
-            <div class="mb-3">
-              <label for="acompanantes" class="form-label">
-                Número de acompañantes
-              </label>
-              <input type="number" class="form-control"
-                id="acompanantes" name="acompanantes"
-                min="0" max="10" value="0">
-            </div>
-
-            <div class="mb-3">
-              <label for="alergias" class="form-label">
-                Alergias o intolerancias alimentarias
-              </label>
-              <textarea class="form-control" id="alergias"
-                name="alergias" rows="3"></textarea>
-            </div>
-
-            <div class="mb-4">
               <label for="mensaje" class="form-label">
                 ¿Quieres dejarnos un mensaje?
               </label>
-              <textarea class="form-control" id="mensaje"
-                name="mensaje" rows="3"></textarea>
+
+              <textarea class="form-control"
+                        id="mensaje"
+                        name="mensaje"
+                        rows="3"
+                        maxlength="1000"></textarea>
+
             </div>
 
-            <div class="text-center">
+            <!-- PRIVACIDAD -->
+            <div class="mt-4">
+
+              <div class="form-check">
+
+                <input class="form-check-input"
+                       type="checkbox"
+                       id="privacidad"
+                       required>
+
+                <label class="form-check-label"
+                       for="privacidad">
+                  He leído la información sobre el tratamiento
+                  de mis datos para gestionar la asistencia
+                  a la boda. *
+                </label>
+
+              </div>
+
+              <p class="texto-legal mt-2">
+                Antes de habilitar los envíos se publicará
+                la información de privacidad definitiva.
+              </p>
+
+            </div>
+
+            <!-- ENVÍO -->
+            <div class="text-center mt-4">
+
               <button type="submit" class="btn btn-boda">
                 Enviar confirmación
               </button>
-              <p id="estadoFormulario" class="mt-3"
-                aria-live="polite"></p>
+
+              <p id="estadoFormulario"
+                 class="mt-3"
+                 aria-live="polite"></p>
+
             </div>
 
           </form>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- FOOTER -->
   <footer class="text-center">
+
     <h2>Javi & Tess</h2>
-    <p>Gracias por formar parte de nuestra historia ♡</p>
+
+    <p>11 de septiembre de 2027</p>
+
+    <p>Una historia que comenzó bailando ♡</p>
+
+    <p>
+      Gracias por formar parte de nuestra historia.
+    </p>
+
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- BOOTSTRAP JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
 
-  <!-- JavaScript propio -->
-  <script src="js/script.js"></script>
+  <!-- JAVASCRIPT PROPIO -->
+  <script src="js/javi&tess.js"></script>
 
 </body>
 </html>
