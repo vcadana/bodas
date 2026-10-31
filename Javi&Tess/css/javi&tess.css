@@ -1,0 +1,217 @@
+
+:root {
+  --crema: #f8f5ef;
+  --verde: #596b56;
+  --dorado: #b49a70;
+  --texto: #444;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--texto);
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--verde);
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: var(--dorado);
+}
+
+/* PORTADA */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.40)),
+    url('../img/portada.jpg') center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(5rem, 11vw, 9rem);
+}
+
+.subtitulo {
+  letter-spacing: 6px;
+  font-size: 0.85rem;
+}
+
+.fecha {
+  letter-spacing: 4px;
+}
+
+.separador {
+  font-size: 3rem;
+  color: #eadbc5;
+}
+
+/* SECCIONES */
+.seccion {
+  padding: 100px 20px;
+}
+
+.fondo-crema {
+  background-color: var(--crema);
+}
+
+.etiqueta {
+  color: var(--dorado);
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--verde);
+  margin-bottom: 25px;
+}
+
+h3 {
+  color: var(--verde);
+}
+
+.btn-boda {
+  background: var(--verde);
+  color: white;
+  border-radius: 0;
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn-boda:hover {
+  background: var(--dorado);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* CUENTA ATRÁS */
+.numero {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--verde);
+  font-weight: 300;
+}
+
+/* HISTORIA */
+.texto-historia {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.firma {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-top: 30px;
+}
+
+/* CEREMONIA */
+.tarjeta-evento {
+  border: 1px solid #ded8cd;
+  padding: 45px 25px;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.tarjeta-evento:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.tarjeta-evento h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+}
+
+.icono-evento {
+  font-size: 3rem;
+  color: var(--dorado);
+  margin-bottom: 20px;
+}
+
+/* GALERÍA */
+.foto-placeholder {
+  min-height: 300px;
+  background: #e4ddd0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #756c60;
+  font-style: italic;
+}
+
+/* FORMULARIO */
+.formulario-boda {
+  padding: 40px;
+  background: var(--crema);
+}
+
+.form-control,
+.form-select {
+  border-radius: 0;
+  padding: 12px;
+  border: 1px solid #d7d0c4;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 0.2rem rgba(89,107,86,0.15);
+}
+
+/* FOOTER */
+footer {
+  background: var(--verde);
+  color: white;
+  padding: 60px 20px;
+}
+
+footer h2 {
+  color: white;
+}
+
+@media (max-width: 767.98px) {
+  .seccion {
+    padding: 65px 15px;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .formulario-boda {
+    padding: 25px 18px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 12px;
+  }
+}

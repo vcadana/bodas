@@ -1,13 +1,279 @@
+
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>La boda de Javi & Tess</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">J & T</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Nuestra historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#evento">La boda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#confirmacion">Confirmar asistencia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PORTADA -->
+  <header id="inicio" class="hero">
+    <div class="hero-contenido text-center">
+      <p class="subtitulo">¡NOS CASAMOS!</p>
+
+      <h1>Javi & Tess</h1>
+
+      <div class="separador">♡</div>
+
+      <p class="fecha">PRÓXIMAMENTE · 2027</p>
+
+      <a href="#historia" class="btn btn-boda mt-4">
+        Descubre nuestra historia
+      </a>
+    </div>
+  </header>
+
+  <!-- CUENTA ATRÁS -->
+  <section class="seccion text-center">
+    <div class="container">
+      <p class="etiqueta">COMIENZA LA CUENTA ATRÁS</p>
+      <h2>Para nuestro gran día</h2>
+      <p>Muy pronto celebraremos juntos un día inolvidable.</p>
+
+      <div class="row justify-content-center g-3 mt-4">
+        <div class="col-3 col-md-2">
+          <div class="numero" id="dias">--</div>
+          <span>Días</span>
+        </div>
+        <div class="col-3 col-md-2">
+          <div class="numero" id="horas">--</div>
+          <span>Horas</span>
+        </div>
+        <div class="col-3 col-md-2">
+          <div class="numero" id="minutos">--</div>
+          <span>Minutos</span>
+        </div>
+        <div class="col-3 col-md-2">
+          <div class="numero" id="segundos">--</div>
+          <span>Segundos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section id="historia" class="seccion fondo-crema">
+    <div class="container text-center">
+      <p class="etiqueta">NUESTRA HISTORIA</p>
+      <h2>El comienzo de nuestro para siempre</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="texto-historia">
+            Hay historias que comienzan por casualidad
+            y terminan convirtiéndose en lo más bonito
+            de nuestras vidas.
+          </p>
+
+          <p>
+            Después de tantos momentos compartidos,
+            aventuras y sueños, hemos decidido dar
+            el siguiente paso.
+          </p>
+
+          <h3 class="firma">Javi & Tess</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEREMONIA Y CELEBRACIÓN -->
+  <section id="evento" class="seccion">
+    <div class="container text-center">
+      <p class="etiqueta">EL GRAN DÍA</p>
+      <h2>¿Dónde nos casamos?</h2>
+
+      <div class="row justify-content-center g-4 mt-4">
+
+        <div class="col-md-5">
+          <div class="tarjeta-evento">
+            <div class="icono-evento">♡</div>
+            <h3>La ceremonia</h3>
+            <p>Fecha y hora por confirmar</p>
+            <p>Lugar de la ceremonia</p>
+            <p>Dirección pendiente</p>
+
+            <a href="#" class="btn btn-boda">
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="tarjeta-evento">
+            <div class="icono-evento">✧</div>
+            <h3>La celebración</h3>
+            <p>Hora por confirmar</p>
+            <p>Lugar de la celebración</p>
+            <p>Dirección pendiente</p>
+
+            <a href="#" class="btn btn-boda">
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="seccion fondo-crema">
+    <div class="container text-center">
+      <p class="etiqueta">NUESTROS RECUERDOS</p>
+      <h2>Momentos especiales</h2>
+
+      <div class="row g-3 mt-4">
+        <div class="col-md-4">
+          <div class="foto-placeholder">Nuestra foto 1</div>
+        </div>
+        <div class="col-md-4">
+          <div class="foto-placeholder">Nuestra foto 2</div>
+        </div>
+        <div class="col-md-4">
+          <div class="foto-placeholder">Nuestra foto 3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIRMACIÓN -->
+  <section id="confirmacion" class="seccion">
+    <div class="container">
+      <div class="text-center">
+        <p class="etiqueta">RSVP</p>
+        <h2>Confirma tu asistencia</h2>
+        <p>Nos encantaría contar contigo en nuestro gran día.</p>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-7">
+          <form id="formInvitados" class="formulario-boda">
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">
+                Nombre y apellidos
+              </label>
+              <input type="text" class="form-control"
+                id="nombre" name="nombre" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">
+                Correo electrónico
+              </label>
+              <input type="email" class="form-control"
+                id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="asistencia" class="form-label">
+                ¿Nos acompañarás?
+              </label>
+              <select class="form-select" id="asistencia"
+                name="asistencia" required>
+                <option value="">Selecciona una opción</option>
+                <option value="si">¡Sí, allí estaré!</option>
+                <option value="no">No podré asistir</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="acompanantes" class="form-label">
+                Número de acompañantes
+              </label>
+              <input type="number" class="form-control"
+                id="acompanantes" name="acompanantes"
+                min="0" max="10" value="0">
+            </div>
+
+            <div class="mb-3">
+              <label for="alergias" class="form-label">
+                Alergias o intolerancias alimentarias
+              </label>
+              <textarea class="form-control" id="alergias"
+                name="alergias" rows="3"></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="mensaje" class="form-label">
+                ¿Quieres dejarnos un mensaje?
+              </label>
+              <textarea class="form-control" id="mensaje"
+                name="mensaje" rows="3"></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-boda">
+                Enviar confirmación
+              </button>
+              <p id="estadoFormulario" class="mt-3"
+                aria-live="polite"></p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="text-center">
+    <h2>Javi & Tess</h2>
+    <p>Gracias por formar parte de nuestra historia ♡</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript propio -->
+  <script src="js/script.js"></script>
+
+</body>
 </html>
